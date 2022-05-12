@@ -1,0 +1,20 @@
+#ISC analysis of fMRI
+#Correlate behavioral or clinical scores with with inter-individual brain response variability (measured as inter-subject correlation; ISC) during movie-viewing.
+
+#ISC analysis tutorial: https://naturalistic-data.org/content/Intersubject_Correlation.html
+
+############################################
+
+#install Datalad
+brew install git-annex
+pip install datalad
+
+#download Sherlock dataset
+!datalad install https://gin.g-node.org/ljchang/Sherlock
+
+#download the k=50 whole brain meta-analytic parcellation of the neurosynth database from neurovault
+
+mask = Brain_Data('http://neurovault.org/media/images/2099/Neurosynth%20Parcellation_0.nii.gz')
+mask_x = expand_mask(mask)
+
+mask.plot()
