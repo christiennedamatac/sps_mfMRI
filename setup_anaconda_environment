@@ -1,0 +1,27 @@
+# Intersubject Correlation analysis of fMRI naturalistic data
+# Correlate behavioral or clinical scores with with inter-individual brain response variability (measured as inter-subject correlation; ISC) during movie-viewing.
+
+# ISC analysis tutorial: 
+open https://naturalistic-data.org/content/Intersubject_Correlation.html
+open https://naturalistic-data.org/content/Software.html
+module load anaconda3/5.0.0
+
+### SET UP ENVIRONMENT ###
+
+# in mentat head node (mentat001-005)
+rm -Rf /home/mrstats/chrgon/.conda/envs/naturalistic
+# setup anaconda environment 
+qsub -I -N 'neuralistic' -l 'walltime=04:00:00,mem=30gb' # startup
+module load anaconda3/2021.05 # startup
+conda create -n naturalistic python=3.7 anaconda
+source activate naturalistic # startup
+
+conda install -c anaconda ipykernel
+python -m ipykernel install --user --name=naturalistic
+conda install -c anaconda ipykernel install numpy scipy scikit-learn pandas matplotlib seaborn
+conda install -c brainiak -c defaults -c conda-forge brainiak
+pip install git+https://github.com/FIU-Neuro/brainconn#egg=brainconn
+pip install nibabel datalad nilearn nltools hypertools timecorr pliers statesegmentation networkx nltk requests urllib3
+conda install -c conda-forge git-annex
+
+# from here, launch vncmanager, then jupyter notebook
