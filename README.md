@@ -7,6 +7,7 @@ Scripts ran in the following order:
 4. inter-subject_correlation_mfMRI
 5. similarity_model_testing_questionnaire
 6. euclidean_distance_questionnaire
-7. inter-subject_representational_similarity
-8. activation
-9. inter-subject_functional_connectivity
+7. inter-subject_representational_similarity_networks
+8. inter-subject_representational_similarity_ROIs
+9. activation
+10. inter-subject_functional_connectivity
