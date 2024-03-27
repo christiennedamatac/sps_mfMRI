@@ -5,7 +5,8 @@ Scripts ran in the following order:
 2. mean_fMRI
 3. head_motion
 4. inter-subject_correlation_mfMRI
-5. euclidean_distance_questionnaire
-6. inter-subject_representational_similarity
-7. activation
-8. inter-subject_functional_connectivity
+5. similarity_model_testing_questionnaire
+6. euclidean_distance_questionnaire
+7. inter-subject_representational_similarity
+8. activation
+9. inter-subject_functional_connectivity
